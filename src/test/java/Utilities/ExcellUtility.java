@@ -46,8 +46,8 @@ public class ExcellUtility {
 
         if (!f.exists()) { // yok ise
             XSSFWorkbook workbook = new XSSFWorkbook();
-            XSSFSheet sheet = workbook.createSheet("CampusTest");
-            // workbook-sheet-row-cell
+            XSSFSheet sheet = workbook.createSheet("Etiya Test");
+
             Row yeniSatir = sheet.createRow(0);
 
             Cell yeniHucre = yeniSatir.createCell(0);
@@ -84,7 +84,7 @@ public class ExcellUtility {
                 System.out.println("e.getMessage() = " + e.getMessage());
             }
 
-            // workbook-sheet-row-cell
+
             int enSonSatirSayisi = sheet.getPhysicalNumberOfRows();
             Row yeniSatir = sheet.createRow(enSonSatirSayisi);
 

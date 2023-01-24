@@ -30,6 +30,13 @@ public class Parent {
         element.click();
     }
 
+    public void clickFunction2(WebElement element)
+    {
+        waitUntilClickable(element);
+        scrollToTop(element);
+        element.click();
+    }
+
     public void waitUntilVisible(WebElement element)
     {
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -40,6 +47,14 @@ public class Parent {
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
+
+    public void scrollToTop(WebElement element)
+    {
+        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
+        js.executeScript("window.scrollBy(0,0)");;
+    }
+
+
 
     public void waitUntilClickable(WebElement element)
     {

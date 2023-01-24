@@ -59,6 +59,24 @@ public class DialogPages extends Parent{
 }
 
 
+    public void findAndClick2(String strlement) {
+
+        switch (strlement) {
+            case "languageButton":
+                myElement = languageButton;
+                break;
+
+            case "turkish":
+                myElement = turkish;
+                break;
+
+        }
+        clickFunction(myElement);
+    }
+
+
+
+
     public void urlAssertion(String value)
 
     {
